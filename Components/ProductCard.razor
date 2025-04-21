@@ -1,0 +1,51 @@
+﻿<div class="flex flex-col m-2 overflow-hidden transition-shadow border rounded-lg shadow-md md:flex-row border-primary hover:shadow-lg"
+     style="background-color: @BackgroundColor;
+            color: @TextColor;
+            width: @Width;"
+     >
+     
+    <div class="flex items-center justify-center w-full p-4 bg-white md:w-1/2">
+        <img src="@ProductImage" alt="@ProductTitle" class="object-contain max-h-64" />
+    </div>
+
+    <div class="flex flex-col w-full p-4 space-y-2 md:w-1/2">
+        <h2 class="text-xl font-bold text-primary">@ProductTitle</h2>
+        <p class="flex-grow text-sm">@ProductDescription</p>
+        <p class="text-sm italic">@Author</p>
+        <div class="flex items-center justify-between pt-2 mt-auto">
+            <p class="text-lg font-semibold text-highlight">R$ @Price.ToString("N2")</p>
+            <button class="px-4 py-1 text-white rounded-md bg-primary hover:bg-secondary">
+                Comprar
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string BorderColor { get; set; } = "#151773";
+
+    [Parameter]
+    public string BackgroundColor { get; set; } = "#FFF";
+
+    [Parameter]
+    public string TextColor { get; set; } = "#000";
+
+    [Parameter]
+    public string Width { get; set; } = "100%";
+
+    [Parameter]
+    public string ProductTitle { get; set; } = string.Empty;
+
+    [Parameter]
+    public string ProductDescription { get; set; } = string.Empty;
+
+    [Parameter]
+    public string ProductImage { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Author { get; set; } = string.Empty;
+
+    [Parameter]
+    public decimal Price { get; set; } = 0.0m;
+}

@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "title": "Pragmatic Programmer",
+    "description": "Um guia prático para programadores pragmáticos que querem melhorar sua abordagem no desenvolvimento de software.",
+    "imageUrl": "https://picsum.photos/360/360?random=1",
+    "author": "Andrew Hunt & David Thomas",
+    "price": 59.9
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "description": "Aprenda como escrever código limpo e manter um software sustentável para criar valor a longo prazo.",
+    "imageUrl": "https://picsum.photos/360/360?random=2",
+    "author": "Robert C. Martin",
+    "price": 49.9
+  },
+  {
+    "id": 3,
+    "title": "Design Patterns",
+    "description": "Soluções reutilizáveis para problemas comuns encontrados no design de software.",
+    "imageUrl": "https://picsum.photos/360/360?random=3",
+    "author": "Erich Gamma et al.",
+    "price": 69.9
+  },
+  {
+    "id": 4,
+    "title": "Domain-Driven Design",
+    "description": "Conectando complexidade técnica e de domínio para criar software que resolve problemas reais de negócio.",
+    "imageUrl": "https://picsum.photos/360/360?random=4",
+    "author": "Eric Evans",
+    "price": 79.9
+  },
+  {
+    "id": 5,
+    "title": "Refactoring",
+    "description": "Melhorando o design de código existente para torná-lo mais legível, manutenível e escalável.",
+    "imageUrl": "https://picsum.photos/360/360?random=5",
+    "author": "Martin Fowler",
+    "price": 54.9
+  },
+  {
+    "id": 6,
+    "title": "Introduction to Algorithms",
+    "description": "Um livro abrangente sobre algoritmos e estruturas de dados, essencial para qualquer programador.",
+    "imageUrl": "https://picsum.photos/360/360?random=6",
+    "author": "Thomas H. Cormen et al.",
+    "price": 89.9
+  },
+  {
+    "id": 7,
+    "title": "Android Programming: The Big Nerd Ranch Guide",
+    "description": "Aprenda a desenvolver aplicativos para Android com este guia prático e detalhado.",
+    "imageUrl": "https://picsum.photos/360/360?random=7",
+    "author": "Bill Phillips et al.",
+    "price": 59.9
+  },
+  {
+    "id": 8,
+    "title": "Eloquent JavaScript",
+    "description": "Um livro moderno sobre JavaScript, cobrindo desde os fundamentos até tópicos avançados.",
+    "imageUrl": "https://picsum.photos/360/360?random=8",
+    "author": "Marijn Haverbeke",
+    "price": 39.9
+  },
+  {
+    "id": 9,
+    "title": "Database Systems: The Complete Book",
+    "description": "Um texto completo sobre sistemas de bancos de dados, cobrindo teoria e prática.",
+    "imageUrl": "https://picsum.photos/360/360?random=9",
+    "author": "Hector Garcia-Molina et al.",
+    "price": 79.9
+  },
+  {
+    "id": 10,
+    "title": "Software Engineering: A Practitioner's Approach",
+    "description": "Um clássico sobre engenharia de software, abordando todo o ciclo de vida do desenvolvimento.",
+    "imageUrl": "https://picsum.photos/360/360?random=10",
+    "author": "Roger S. Pressman",
+    "price": 69.9
+  },
+  {
+    "id": 11,
+    "title": "The Art of Computer Programming",
+    "description": "Uma obra-prima sobre algoritmos e programação, escrita por um dos maiores nomes da área.",
+    "imageUrl": "https://picsum.photos/360/360?random=11",
+    "author": "Donald Knuth",
+    "price": 99.9
+  },
+  {
+    "id": 12,
+    "title": "Head First Design Patterns",
+    "description": "Aprenda padrões de design de software de forma divertida e visual.",
+    "imageUrl": "https://picsum.photos/360/360?random=12",
+    "author": "Eric Freeman et al.",
+    "price": 49.9
+  },
+  {
+    "id": 13,
+    "title": "Effective Java",
+    "description": "Melhores práticas para programar em Java, direto do especialista na linguagem.",
+    "imageUrl": "https://picsum.photos/360/360?random=13",
+    "author": "Joshua Bloch",
+    "price": 54.9
+  },
+  {
+    "id": 14,
+    "title": "Clean Architecture",
+    "description": "Princípios para construir arquiteturas de software robustas e independentes de frameworks.",
+    "imageUrl": "https://picsum.photos/360/360?random=14",
+    "author": "Robert C. Martin",
+    "price": 64.9
+  },
+  {
+    "id": 15,
+    "title": "Code Complete",
+    "description": "Um guia definitivo para escrever código de alta qualidade e bem estruturado.",
+    "imageUrl": "https://picsum.photos/360/360?random=15",
+    "author": "Steve McConnell",
+    "price": 59.9
+  },
+  {
+    "id": 16,
+    "title": "The Mythical Man-Month",
+    "description": "Reflexões sobre gerenciamento de projetos de software e produtividade.",
+    "imageUrl": "https://picsum.photos/360/360?random=16",
+    "author": "Frederick P. Brooks Jr.",
+    "price": 34.9
+  },
+  {
+    "id": 17,
+    "title": "Peopleware",
+    "description": "Explora o lado humano do desenvolvimento de software e gerenciamento de equipes.",
+    "imageUrl": "https://picsum.photos/360/360?random=17",
+    "author": "Tom DeMarco & Timothy Lister",
+    "price": 44.9
+  },
+  {
+    "id": 18,
+    "title": "Continuous Delivery",
+    "description": "Técnicas para entregar software de forma rápida e confiável.",
+    "imageUrl": "https://picsum.photos/360/360?random=18",
+    "author": "Jez Humble & David Farley",
+    "price": 69.9
+  },
+  {
+    "id": 19,
+    "title": "Test-Driven Development",
+    "description": "Aprenda a escrever software guiado por testes para maior qualidade e confiança.",
+    "imageUrl": "https://picsum.photos/360/360?random=19",
+    "author": "Kent Beck",
+    "price": 49.9
+  },
+  {
+    "id": 20,
+    "title": "Algorithms Unlocked",
+    "description": "Uma introdução acessível aos conceitos fundamentais de algoritmos.",
+    "imageUrl": "https://picsum.photos/360/360?random=20",
+    "author": "Thomas H. Cormen",
+    "price": 39.9
+  },
+  {
+    "id": 21,
+    "title": "The Algorithm Design Manual",
+    "description": "Um manual prático para projetar e implementar algoritmos eficientes.",
+    "imageUrl": "https://picsum.photos/360/360?random=21",
+    "author": "Steven S. Skiena",
+    "price": 74.9
+  },
+  {
+    "id": 22,
+    "title": "Grokking Algorithms",
+    "description": "Explicações ilustradas e intuitivas sobre algoritmos para iniciantes.",
+    "imageUrl": "https://picsum.photos/360/360?random=22",
+    "author": "Aditya Bhargava",
+    "price": 29.9
+  },
+  {
+    "id": 23,
+    "title": "Algorithmic Puzzles",
+    "description": "Desafios e quebra-cabeças para aprimorar suas habilidades em algoritmos.",
+    "imageUrl": "https://picsum.photos/360/360?random=23",
+    "author": "Anany Levitin",
+    "price": 34.9
+  },
+  {
+    "id": 24,
+    "title": "iOS Programming: The Big Nerd Ranch Guide",
+    "description": "Guia completo para desenvolver aplicativos iOS com Swift.",
+    "imageUrl": "https://picsum.photos/360/360?random=24",
+    "author": "Christian Keur et al.",
+    "price": 59.9
+  },
+  {
+    "id": 25,
+    "title": "React Native in Action",
+    "description": "Construa aplicativos móveis multiplataforma com React Native.",
+    "imageUrl": "https://picsum.photos/360/360?random=25",
+    "author": "Nader Dabit",
+    "price": 49.9
+  },
+  {
+    "id": 26,
+    "title": "Flutter for Beginners",
+    "description": "Introdução ao desenvolvimento mobile com Flutter e Dart.",
+    "imageUrl": "https://picsum.photos/360/360?random=26",
+    "author": "Alessandro Biessek",
+    "price": 39.9
+  },
+  {
+    "id": 27,
+    "title": "Kotlin for Android Developers",
+    "description": "Aprenda Kotlin para criar aplicativos Android modernos.",
+    "imageUrl": "https://picsum.photos/360/360?random=27",
+    "author": "Antonio Leiva",
+    "price": 44.9
+  },
+  {
+    "id": 28,
+    "title": "You Don’t Know JS",
+    "description": "Explore os detalhes mais profundos da linguagem JavaScript.",
+    "imageUrl": "https://picsum.photos/360/360?random=28",
+    "author": "Kyle Simpson",
+    "price": 29.9
+  },
+  {
+    "id": 29,
+    "title": "HTML and CSS: Design and Build Websites",
+    "description": "Fundamentos de design web com HTML e CSS explicados de forma clara.",
+    "imageUrl": "https://picsum.photos/360/360?random=29",
+    "author": "Jon Duckett",
+    "price": 34.9
+  },
+  {
+    "id": 30,
+    "title": "JavaScript: The Good Parts",
+    "description": "Foco nas melhores características da linguagem JavaScript.",
+    "imageUrl": "https://picsum.photos/360/360?random=30",
+    "author": "Douglas Crockford",
+    "price": 24.9
+  },
+  {
+    "id": 31,
+    "title": "Node.js Design Patterns",
+    "description": "Padrões de design para construir aplicações escaláveis com Node.js.",
+    "imageUrl": "https://picsum.photos/360/360?random=31",
+    "author": "Mario Casciaro",
+    "price": 54.9
+  },
+  {
+    "id": 32,
+    "title": "SQL for Data Scientists",
+    "description": "Aprenda SQL focado em análise e manipulação de dados.",
+    "imageUrl": "https://picsum.photos/360/360?random=32",
+    "author": "Renee M. P. Teate",
+    "price": 39.9
+  },
+  {
+    "id": 33,
+    "title": "NoSQL Distilled",
+    "description": "Uma introdução concisa aos bancos de dados NoSQL.",
+    "imageUrl": "https://picsum.photos/360/360?random=33",
+    "author": "Pramod J. Sadalage & Martin Fowler",
+    "price": 34.9
+  },
+  {
+    "id": 34,
+    "title": "The C Programming Language",
+    "description": "O clássico que define a linguagem C, escrito por seus criadores.",
+    "imageUrl": "https://picsum.photos/360/360?random=34",
+    "author": "Brian Kernighan & Dennis Ritchie",
+    "price": 29.9
+  },
+  {
+    "id": 35,
+    "title": "Python Crash Course",
+    "description": "Um curso intensivo sobre os fundamentos da programação em Python.",
+    "imageUrl": "https://picsum.photos/360/360?random=35",
+    "author": "Eric Matthes",
+    "price": 39.9
+  },
+  {
+    "id": 36,
+    "title": "Automate the Boring Stuff with Python",
+    "description": "Automatize tarefas rotineiras com scripts em Python.",
+    "imageUrl": "https://picsum.photos/360/360?random=36",
+    "author": "Al Sweigart",
+    "price": 34.9
+  },
+  {
+    "id": 37,
+    "title": "Learning Python",
+    "description": "Um guia detalhado para aprender Python do básico ao avançado.",
+    "imageUrl": "https://picsum.photos/360/360?random=37",
+    "author": "Mark Lutz",
+    "price": 49.9
+  },
+  {
+    "id": 38,
+    "title": "Django for Beginners",
+    "description": "Construa aplicações web com o framework Django em Python.",
+    "imageUrl": "https://picsum.photos/360/360?random=38",
+    "author": "William S. Vincent",
+    "price": 44.9
+  },
+  {
+    "id": 39,
+    "title": "Flask Web Development",
+    "description": "Desenvolva aplicações web leves e flexíveis com Flask.",
+    "imageUrl": "https://picsum.photos/360/360?random=39",
+    "author": "Miguel Grinberg",
+    "price": 39.9
+  },
+  {
+    "id": 40,
+    "title": "Ruby on Rails Tutorial",
+    "description": "Aprenda a criar aplicações web com Ruby on Rails passo a passo.",
+    "imageUrl": "https://picsum.photos/360/360?random=40",
+    "author": "Michael Hartl",
+    "price": 49.9
+  },
+  {
+    "id": 41,
+    "title": "Structure and Interpretation of Computer Programs",
+    "description": "Um clássico sobre os fundamentos da programação e computação.",
+    "imageUrl": "https://picsum.photos/360/360?random=41",
+    "author": "Harold Abelson & Gerald Jay Sussman",
+    "price": 59.9
+  },
+  {
+    "id": 42,
+    "title": "Compilers: Principles, Techniques, and Tools",
+    "description": "Conhecido como 'O Livro do Dragão', explora a construção de compiladores.",
+    "imageUrl": "https://picsum.photos/360/360?random=42",
+    "author": "Alfred V. Aho et al.",
+    "price": 89.9
+  },
+  {
+    "id": 43,
+    "title": "Operating System Concepts",
+    "description": "Fundamentos de sistemas operacionais explicados de forma clara.",
+    "imageUrl": "https://picsum.photos/360/360?random=43",
+    "author": "Abraham Silberschatz et al.",
+    "price": 79.9
+  },
+  {
+    "id": 44,
+    "title": "Computer Networks",
+    "description": "Uma introdução abrangente às redes de computadores.",
+    "imageUrl": "https://picsum.photos/360/360?random=44",
+    "author": "Andrew S. Tanenbaum",
+    "price": 69.9
+  },
+  {
+    "id": 45,
+    "title": "Artificial Intelligence: A Modern Approach",
+    "description": "O livro definitivo sobre inteligência artificial moderna.",
+    "imageUrl": "https://picsum.photos/360/360?random=45",
+    "author": "Stuart Russell & Peter Norvig",
+    "price": 99.9
+  },
+  {
+    "id": 46,
+    "title": "Machine Learning for Dummies",
+    "description": "Introdução acessível aos conceitos de aprendizado de máquina.",
+    "imageUrl": "https://picsum.photos/360/360?random=46",
+    "author": "John Paul Mueller",
+    "price": 29.9
+  },
+  {
+    "id": 47,
+    "title": "Deep Learning with Python",
+    "description": "Implemente redes neurais profundas usando Python e Keras.",
+    "imageUrl": "https://picsum.photos/360/360?random=47",
+    "author": "François Chollet",
+    "price": 49.9
+  },
+  {
+    "id": 48,
+    "title": "Web Development with Node and Express",
+    "description": "Construa aplicações web robustas com Node.js e Express.",
+    "imageUrl": "https://picsum.photos/360/360?random=48",
+    "author": "Ethan Brown",
+    "price": 44.9
+  },
+  {
+    "id": 49,
+    "title": "Responsive Web Design",
+    "description": "Técnicas para criar sites que se adaptam a qualquer dispositivo.",
+    "imageUrl": "https://picsum.photos/360/360?random=49",
+    "author": "Ethan Marcotte",
+    "price": 34.9
+  },
+  {
+    "id": 50,
+    "title": "CSS: The Definitive Guide",
+    "description": "Tudo o que você precisa saber sobre estilização com CSS.",
+    "imageUrl": "https://picsum.photos/360/360?random=50",
+    "author": "Eric A. Meyer",
+    "price": 39.9
+  },
+  {
+    "id": 51,
+    "title": "JavaScript and jQuery: Interactive Front-End Development",
+    "description": "Crie interfaces dinâmicas com JavaScript e jQuery.",
+    "imageUrl": "https://picsum.photos/360/360?random=51",
+    "author": "Jon Duckett",
+    "price": 44.9
+  },
+  {
+    "id": 52,
+    "title": "Data Structures in Python",
+    "description": "Explore estruturas de dados essenciais usando Python.",
+    "imageUrl": "https://picsum.photos/360/360?random=52",
+    "author": "Ana Ribeiro",
+    "price": 39.9
+  },
+  {
+    "id": 53,
+    "title": "Mobile UX Design",
+    "description": "Princípios de design de experiência do usuário para dispositivos móveis.",
+    "imageUrl": "https://picsum.photos/360/360?random=53",
+    "author": "Clara Menezes",
+    "price": 34.9
+  },
+  {
+    "id": 54,
+    "title": "Web Security Basics",
+    "description": "Fundamentos de segurança para proteger aplicações web.",
+    "imageUrl": "https://picsum.photos/360/360?random=54",
+    "author": "Pedro Almeida",
+    "price": 29.9
+  },
+  {
+    "id": 55,
+    "title": "Agile Software Development",
+    "description": "Métodos ágeis para gerenciar projetos de software com eficiência.",
+    "imageUrl": "https://picsum.photos/360/360?random=55",
+    "author": "Luiz Costa",
+    "price": 49.9
+  },
+  {
+    "id": 56,
+    "title": "Graph Databases Explained",
+    "description": "Introdução aos bancos de dados baseados em grafos.",
+    "imageUrl": "https://picsum.photos/360/360?random=56",
+    "author": "Mariana Lopes",
+    "price": 44.9
+  },
+  {
+    "id": 57,
+    "title": "Advanced Algorithms",
+    "description": "Tópicos avançados em algoritmos para problemas complexos.",
+    "imageUrl": "https://picsum.photos/360/360?random=57",
+    "author": "João Silva",
+    "price": 59.9
+  },
+  {
+    "id": 58,
+    "title": "Swift Programming Essentials",
+    "description": "Domine os fundamentos da linguagem Swift para iOS.",
+    "imageUrl": "https://picsum.photos/360/360?random=58",
+    "author": "Beatriz Santos",
+    "price": 39.9
+  },
+  {
+    "id": 59,
+    "title": "Vue.js Quick Start",
+    "description": "Comece rapidamente a desenvolver com o framework Vue.js.",
+    "imageUrl": "https://picsum.photos/360/360?random=59",
+    "author": "Rafael Pereira",
+    "price": 34.9
+  },
+  {
+    "id": 60,
+    "title": "Microservices Architecture",
+    "description": "Construa sistemas escaláveis com arquitetura de microsserviços.",
+    "imageUrl": "https://picsum.photos/360/360?random=60",
+    "author": "Carla Oliveira",
+    "price": 54.9
+  },
+  {
+    "id": 61,
+    "title": "Relational Database Design",
+    "description": "Princípios de design para bancos de dados relacionais eficientes.",
+    "imageUrl": "https://picsum.photos/360/360?random=61",
+    "author": "André Lima",
+    "price": 49.9
+  },
+  {
+    "id": 62,
+    "title": "Dynamic Programming Unleashed",
+    "description": "Técnicas de programação dinâmica para otimizar soluções.",
+    "imageUrl": "https://picsum.photos/360/360?random=62",
+    "author": "Lucas Fernandes",
+    "price": 44.9
+  },
+  {
+    "id": 63,
+    "title": "Cross-Platform Mobile Development",
+    "description": "Estratégias para desenvolver apps em múltiplas plataformas.",
+    "imageUrl": "https://picsum.photos/360/360?random=63",
+    "author": "Sofia Mendes",
+    "price": 39.9
+  },
+  {
+    "id": 64,
+    "title": "Angular Fundamentals",
+    "description": "Aprenda os conceitos básicos do framework Angular.",
+    "imageUrl": "https://picsum.photos/360/360?random=64",
+    "author": "Felipe Costa",
+    "price": 34.9
+  },
+  {
+    "id": 65,
+    "title": "DevOps Handbook",
+    "description": "Práticas de DevOps para entrega contínua e colaboração.",
+    "imageUrl": "https://picsum.photos/360/360?random=65",
+    "author": "Juliana Rocha",
+    "price": 59.9
+  },
+  {
+    "id": 66,
+    "title": "MongoDB in Action",
+    "description": "Guia prático para usar o banco de dados MongoDB.",
+    "imageUrl": "https://picsum.photos/360/360?random=66",
+    "author": "Bruno Teixeira",
+    "price": 44.9
+  },
+  {
+    "id": 67,
+    "title": "Greedy Algorithms Made Simple",
+    "description": "Entenda algoritmos gulosos com exemplos práticos.",
+    "imageUrl": "https://picsum.photos/360/360?random=67",
+    "author": "Marina Duarte",
+    "price": 29.9
+  },
+  {
+    "id": 68,
+    "title": "Ionic Framework Guide",
+    "description": "Desenvolva apps híbridos com Ionic e Angular.",
+    "imageUrl": "https://picsum.photos/360/360?random=68",
+    "author": "Thiago Almeida",
+    "price": 39.9
+  },
+  {
+    "id": 69,
+    "title": "React.js Essentials",
+    "description": "Domine os fundamentos do React para interfaces modernas.",
+    "imageUrl": "https://picsum.photos/360/360?random=69",
+    "author": "Laura Martins",
+    "price": 34.9
+  },
+  {
+    "id": 70,
+    "title": "Software Testing Principles",
+    "description": "Técnicas essenciais para garantir a qualidade de software.",
+    "imageUrl": "https://picsum.photos/360/360?random=70",
+    "author": "Gustavo Lima",
+    "price": 49.9
+  },
+  {
+    "id": 71,
+    "title": "Big Data Basics",
+    "description": "Introdução ao processamento e análise de grandes volumes de dados.",
+    "imageUrl": "https://picsum.photos/360/360?random=71",
+    "author": "Renata Souza",
+    "price": 54.9
+  },
+  {
+    "id": 72,
+    "title": "Sorting Algorithms Handbook",
+    "description": "Guia completo sobre algoritmos de ordenação e suas aplicações.",
+    "imageUrl": "https://picsum.photos/360/360?random=72",
+    "author": "Carlos Eduardo",
+    "price": 39.9
+  },
+  {
+    "id": 73,
+    "title": "Xamarin Mobile Development",
+    "description": "Crie apps multiplataforma com Xamarin e C#.",
+    "imageUrl": "https://picsum.photos/360/360?random=73",
+    "author": "Patrícia Gomes",
+    "price": 44.9
+  },
+  {
+    "id": 74,
+    "title": "TypeScript for Web Developers",
+    "description": "Aprimore suas habilidades web com TypeScript.",
+    "imageUrl": "https://picsum.photos/360/360?random=74",
+    "author": "Diego Ferreira",
+    "price": 34.9
+  },
+  {
+    "id": 75,
+    "title": "Extreme Programming Explained",
+    "description": "Métodos de programação extrema para equipes ágeis.",
+    "imageUrl": "https://picsum.photos/360/360?random=75",
+    "author": "Ana Paula",
+    "price": 49.9
+  },
+  {
+    "id": 76,
+    "title": "Redis Essentials",
+    "description": "Aprenda a usar Redis para armazenamento de dados em memória.",
+    "imageUrl": "https://picsum.photos/360/360?random=76",
+    "author": "Marcelo Ribeiro",
+    "price": 39.9
+  },
+  {
+    "id": 77,
+    "title": "Divide and Conquer Strategies",
+    "description": "Técnicas de divisão e conquista para resolver problemas complexos.",
+    "imageUrl": "https://picsum.photos/360/360?random=77",
+    "author": "Roberta Campos",
+    "price": 34.9
+  },
+  {
+    "id": 78,
+    "title": "Mobile Game Development",
+    "description": "Crie jogos móveis com Unity e C#.",
+    "imageUrl": "https://picsum.photos/360/360?random=78",
+    "author": "Eduardo Santos",
+    "price": 59.9
+  },
+  {
+    "id": 79,
+    "title": "Svelte for Beginners",
+    "description": "Introdução ao framework Svelte para interfaces reativas.",
+    "imageUrl": "https://picsum.photos/360/360?random=79",
+    "author": "Fernanda Lima",
+    "price": 29.9
+  },
+  {
+    "id": 80,
+    "title": "Kanban in Software Development",
+    "description": "Aplique o método Kanban para gerenciar projetos de software.",
+    "imageUrl": "https://picsum.photos/360/360?random=80",
+    "author": "Ricardo Oliveira",
+    "price": 44.9
+  },
+  {
+    "id": 81,
+    "title": "PostgreSQL Mastery",
+    "description": "Domine o banco de dados PostgreSQL com exemplos práticos.",
+    "imageUrl": "https://picsum.photos/360/360?random=81",
+    "author": "Letícia Almeida",
+    "price": 49.9
+  },
+  {
+    "id": 82,
+    "title": "Graph Algorithms Simplified",
+    "description": "Entenda algoritmos de grafos com explicações claras.",
+    "imageUrl": "https://picsum.photos/360/360?random=82",
+    "author": "Victor Hugo",
+    "price": 39.9
+  },
+  {
+    "id": 83,
+    "title": "Dart Programming Guide",
+    "description": "Aprenda Dart para desenvolvimento com Flutter.",
+    "imageUrl": "https://picsum.photos/360/360?random=83",
+    "author": "Camila Torres",
+    "price": 34.9
+  },
+  {
+    "id": 84,
+    "title": "Next.js in Action",
+    "description": "Construa aplicações web modernas com Next.js.",
+    "imageUrl": "https://picsum.photos/360/360?random=84",
+    "author": "Bruno Costa",
+    "price": 44.9
+  },
+  {
+    "id": 85,
+    "title": "Scrum Essentials",
+    "description": "Fundamentos do Scrum para equipes de desenvolvimento.",
+    "imageUrl": "https://picsum.photos/360/360?random=85",
+    "author": "Tatiana Silva",
+    "price": 39.9
+  },
+  {
+    "id": 86,
+    "title": "Cassandra for Developers",
+    "description": "Explore o banco de dados distribuído Cassandra.",
+    "imageUrl": "https://picsum.photos/360/360?random=86",
+    "author": "Rodrigo Mendes",
+    "price": 54.9
+  },
+  {
+    "id": 87,
+    "title": "Backtracking Techniques",
+    "description": "Resolva problemas complexos com técnicas de backtracking.",
+    "imageUrl": "https://picsum.photos/360/360?random=87",
+    "author": "Isabela Ferreira",
+    "price": 34.9
+  },
+  {
+    "id": 88,
+    "title": "Progressive Web Apps",
+    "description": "Crie aplicações web progressivas com desempenho nativo.",
+    "imageUrl": "https://picsum.photos/360/360?random=88",
+    "author": "Lucas Almeida",
+    "price": 39.9
+  },
+  {
+    "id": 89,
+    "title": "PHP Modern Development",
+    "description": "Desenvolva aplicações web com PHP contemporâneo.",
+    "imageUrl": "https://picsum.photos/360/360?random=89",
+    "author": "Mariana Costa",
+    "price": 44.9
+  },
+  {
+    "id": 90,
+    "title": "Lean Software Development",
+    "description": "Aplique princípios lean ao desenvolvimento de software.",
+    "imageUrl": "https://picsum.photos/360/360?random=90",
+    "author": "Paulo Roberto",
+    "price": 49.9
+  },
+  {
+    "id": 91,
+    "title": "Elasticsearch Guide",
+    "description": "Use Elasticsearch para busca e análise de dados.",
+    "imageUrl": "https://picsum.photos/360/360?random=91",
+    "author": "Cláudio Santos",
+    "price": 54.9
+  },
+  {
+    "id": 92,
+    "title": "Randomized Algorithms",
+    "description": "Introdução aos algoritmos probabilísticos e suas aplicações.",
+    "imageUrl": "https://picsum.photos/360/360?random=92",
+    "author": "Sérgio Lima",
+    "price": 39.9
+  },
+  {
+    "id": 93,
+    "title": "Cordova Mobile Apps",
+    "description": "Desenvolva apps híbridos com Apache Cordova.",
+    "imageUrl": "https://picsum.photos/360/360?random=93",
+    "author": "Vanessa Ribeiro",
+    "price": 34.9
+  },
+  {
+    "id": 94,
+    "title": "GraphQL Essentials",
+    "description": "Aprenda GraphQL para APIs modernas e eficientes.",
+    "imageUrl": "https://picsum.photos/360/360?random=94",
+    "author": "Daniel Oliveira",
+    "price": 44.9
+  },
+  {
+    "id": 95,
+    "title": "Pair Programming Guide",
+    "description": "Técnicas de programação em dupla para melhor colaboração.",
+    "imageUrl": "https://picsum.photos/360/360?random=95",
+    "author": "Júlia Mendes",
+    "price": 29.9
+  },
+  {
+    "id": 96,
+    "title": "DynamoDB in Practice",
+    "description": "Guia prático para usar o DynamoDB da AWS.",
+    "imageUrl": "https://picsum.photos/360/360?random=96",
+    "author": "Fábio Costa",
+    "price": 49.9
+  },
+  {
+    "id": 97,
+    "title": "Approximation Algorithms",
+    "description": "Soluções aproximadas para problemas computacionais difíceis.",
+    "imageUrl": "https://picsum.photos/360/360?random=97",
+    "author": "Renato Silva",
+    "price": 39.9
+  },
+  {
+    "id": 98,
+    "title": "Mobile Security Handbook",
+    "description": "Práticas de segurança para proteger aplicativos móveis.",
+    "imageUrl": "https://picsum.photos/360/360?random=98",
+    "author": "Larissa Almeida",
+    "price": 44.9
+  },
+  {
+    "id": 99,
+    "title": "Laravel Foundations",
+    "description": "Construa aplicações web com o framework Laravel.",
+    "imageUrl": "https://picsum.photos/360/360?random=99",
+    "author": "Matheus Souza",
+    "price": 34.9
+  },
+  {
+    "id": 100,
+    "title": "Software Craftsmanship",
+    "description": "Princípios para se tornar um artesão do software.",
+    "imageUrl": "https://picsum.photos/360/360?random=100",
+    "author": "Sandra Lopes",
+    "price": 59.9
+  }
+]
