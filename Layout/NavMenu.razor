@@ -1,0 +1,61 @@
+﻿<nav class="bg-[#151773]">
+    <div class="flex flex-wrap justify-between p-4 ">
+        <h1 class="text-2xl font-bold">
+            <span class="text-[#76be11] italic font-bold">Learn<span class="text-white font-normal">Shop</span></span>
+        </h1>
+        <span>CARRINHO</span>
+        <button @onclick="TrocarEstadoMenu" type="button" id="botao-menu"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+        </button>
+        <div class="@(menuAberto ? "" : "hidden") w-full md:block md:w-auto" id="menu-opcoes">
+            <ul class="text-white font-medium flex flex-col items-center p-4 mt-4
+               bg-[#3F47D4]
+               md:flex-row md:space-x-8 md:p-0 md:bg-transparent">
+                <li class="w-full rounded-sm hover:bg-[#76be11]">
+                    <a href="/" class="block w-full py-2 px-3 text-center text-white" aria-current="page">
+                        Home
+                    </a>
+                </li>
+                <li class="w-full rounded-sm hover:bg-[#76be11]">
+                    <a href="algoritmos" class="block w-full py-2 px-3 text-center text-white">
+                        Algoritmos
+                    </a>
+                </li>
+                <li class="w-full rounded-sm hover:bg-[#76be11]">
+                    <a href="bancosdedados" class="block w-full py-2 px-3 text-center text-white">
+                        Banco de Dados
+                    </a>
+                </li>
+                <li class="w-full rounded-sm hover:bg-[#76be11]">
+                <a href="weather" class="block w-full py-2 px-3 text-center text-white">
+                    Desenvolvimento Mobile
+                </a>
+                </li>
+                <li class="w-full rounded-sm hover:bg-[#76be11]">
+                    <a href="counter" class="block w-full py-2 px-3 text-center text-white">
+                        Desenvolvimento WEB
+                    </a>
+                </li>
+                <li class="w-full rounded-sm hover:bg-[#76be11]">
+                    <a href="engenharia" class="block w-full py-2 px-3 text-center text-white">
+                        Engenharia de Software
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool menuAberto = false;
+
+    private void TrocarEstadoMenu()
+    {
+        menuAberto = !menuAberto;
+    }
+}
