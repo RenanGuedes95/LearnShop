@@ -1,6 +1,61 @@
 ﻿@page "/"
-@using LearnShop.Components
-
-<Header/>
+@using LearnShop.Models
+@using LearnShop.Services
+@using LearnShop.Services.Interfaces
+@inject IEbookService EbookService
 
 <PageTitle>Home</PageTitle>
+
+<div class="flex h-[5vh] w-full items-center justify-center rounded-sm border bg-[#151773] text-2xl font-bold">
+    <span class="text-white">HOME</span>
+</div>
+
+<div class="container px-4 py-8 mx-auto">
+    <div class="flex items-center justify-center mb-center">
+        <h1 class="mb-6 text-3xl font-bold text-primary">E-books em destaque</h1>
+    </div>
+    
+    @if (isLoading) 
+    {
+        <div class="flex justify-center">
+            <div class="w-12 h-12 border-t-2 border-b-2 rounded-full animate-spin border-primary"></div>
+        </div>
+    }
+    else if (ebooks == null || !ebooks.Any()) 
+    {
+        <div class="py-8 text-center">
+            <p>Nenhum encontrado</p>
+        </div>
+    }
+    else 
+    {
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            @foreach (var ebook in ebooks) 
+            {
+                <ProductCard
+                    ProductTitle="@ebook.Title" 
+                    ProductDescription="@ebook.Description" 
+                    ProductImage="@ebook.ImageUrl" 
+                    Author="@ebook.Author" 
+                    Price="@ebook.Price" 
+                    Width="100%" 
+                    BackgroundColor="#FFF" 
+                    TextColor="#000" 
+                />
+            }
+        </div>
+    }
+
+</div>
+
+@code {
+    private List<Ebook>? ebooks;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+        ebooks = await EbookService.GetEbooksAsync();
+        isLoading = false;
+    }
+}
