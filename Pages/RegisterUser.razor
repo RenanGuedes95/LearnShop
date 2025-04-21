@@ -1,0 +1,52 @@
+@page "/cadastrar/usuario"
+
+<PageTitle>Cadastrar Usuário</PageTitle>
+<div class="flex items-center flex-col w-full h-screen bg-[#D9D9D9]">
+    <div class="bg-[#151773] flex items-center justify-center w-full h-[5vh] border rounded-sm font-bold text-2xl">
+        <span class="text-white">CADASTRO</span>
+    </div>
+    <div class="flex flex-col items-center justify-center w-full mt-35">
+        <div class="flex flex-col items-center justify-center bg-white border rounded-2xl w-[90vw] h-[50vh] md:w-[35vw]">
+            <Input 
+                Label="Nome"
+                Type="text" 
+                Id="name"
+                @bind-Value="nomeUsuario"
+                Placeholder="Digite seu nome" />
+            
+            <Input 
+                Label="CPF"
+                Type="text" 
+                Id="cpf"
+                @bind-Value="cpfUsuario"
+                Placeholder="Digite seu CPF" />
+            
+            <Input 
+                Label="Email"
+                Type="email" 
+                Id="email"
+                @bind-Value="emailUsuario"
+                Placeholder="Digite seu E-mail" />
+            
+            <Input 
+                Label="Senha"
+                Type="password" 
+                Id="password"
+                @bind-Value="senhaUsuario"
+                Placeholder="Digite sua senha" />
+
+            <div class="flex items-center justify-center bg-transparent mt-10">
+                <button type="button" class="w-[100px] h-[45px] font-bold text-lg bg-[#76be11] border rounded-2xl">
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string? nomeUsuario;
+    private string? cpfUsuario;
+    private string? emailUsuario;
+    private string? senhaUsuario;
+}

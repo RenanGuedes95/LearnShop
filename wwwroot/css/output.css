@@ -23,6 +23,8 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -274,6 +276,9 @@
   }
   .z-3 {
     z-index: 3;
+  }
+  .z-10 {
+    z-index: 10;
   }
   .order-0 {
     order: 0;
@@ -590,6 +595,15 @@
   .h-\[5vh\] {
     height: 5vh;
   }
+  .h-\[40px\] {
+    height: 40px;
+  }
+  .h-\[45px\] {
+    height: 45px;
+  }
+  .h-\[50vh\] {
+    height: 50vh;
+  }
   .h-auto {
     height: auto;
   }
@@ -616,6 +630,15 @@
   }
   .w-100 {
     width: calc(var(--spacing) * 100);
+  }
+  .w-\[90vw\] {
+    width: 90vw;
+  }
+  .w-\[100px\] {
+    width: 100px;
+  }
+  .w-\[300px\] {
+    width: 300px;
   }
   .w-auto {
     width: auto;
@@ -800,6 +823,11 @@
   .rounded-t-lg {
     border-top-left-radius: var(--radius-lg);
     border-top-right-radius: var(--radius-lg);
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -867,8 +895,14 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-\[\#76be11\] {
+    background-color: #76be11;
+  }
   .bg-\[\#151773\] {
     background-color: #151773;
+  }
+  .bg-\[\#D9D9D9\] {
+    background-color: #D9D9D9;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -1074,6 +1108,14 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -1266,24 +1308,9 @@
       display: none;
     }
   }
-  .md\:w-1\/2 {
+  .md\:w-\[35vw\] {
     @media (width >= 48rem) {
-      width: calc(1/2 * 100%);
-    }
-  }
-  .md\:w-screen {
-    @media (width >= 48rem) {
-      width: 100vw;
-    }
-  }
-  .md\:grid-cols-2 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .md\:flex-row {
-    @media (width >= 48rem) {
-      flex-direction: row;
+      width: 35vw;
     }
   }
   .md\:text-\[2rem\] {
