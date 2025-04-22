@@ -1,21 +1,57 @@
-﻿<div class="flex flex-col m-2 overflow-hidden transition-shadow border rounded-lg shadow-md md:flex-row border-primary hover:shadow-lg"
-     style="background-color: @BackgroundColor;
-            color: @TextColor;
-            width: @Width;"
-     >
+﻿<div class="grid grid-rows-[auto_1fr_auto] gap-2 m-2 overflow-hidden 
+            border rounded-md shadow-md 
+            bg-gradient-to-br from-blue-300 to-green-600 
+            hover:shadow-2xl p-4
+            transition-transform transform hover:scale-105
+            max-h-[35rem]"
+     style="color: @(TextColor);
+            width: @(Width);">
      
-    <div class="flex items-center justify-center w-full p-4 bg-white md:w-1/2">
-        <img src="@ProductImage" alt="@ProductTitle" class="object-contain max-h-64" />
+    <div class="flex items-center justify-between pb-2 border-b">
+        <h2 class="text-xl font-bold text-primary">@ProductTitle</h2>
+        <p class="text-sm italic">@Author</p>
     </div>
 
-    <div class="flex flex-col w-full p-4 space-y-2 md:w-1/2">
-        <h2 class="text-xl font-bold text-primary">@ProductTitle</h2>
-        <p class="flex-grow text-sm">@ProductDescription</p>
-        <p class="text-sm italic">@Author</p>
-        <div class="flex items-center justify-between pt-2 mt-auto">
-            <p class="font-bold sm:text-2xl md:text-[1.3rem] lg:text-[1rem] text-highlight">R$ @Price.ToString("N2")</p>
-            <button class="px-4 py-1 text-xl font-bold text-white rounded-md bg-primary hover:bg-secondary">
-                Comprar
+    <div class="grid grid-cols-[1fr_1fr] gap-4 py-4">
+        <div class="flex items-center justify-center">
+            <img src="@ProductImage" alt="@ProductTitle" class="object-contain border rounded-sm h-80 max-w-56 bg-gradient-to-br from-green-600 to-blue-800" />
+        </div>
+        <div class="flex flex-col justify-between h-full">
+            <div>
+                <p class="text-sm">@ProductDescription</p>
+            </div>
+
+            <div class="text-xs text-right">
+                <div>
+                    <div>
+                        <p class="text-sm font-normal text-left">Editora:</p>
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-left">
+                        <a class="" href="">@(Publisher)</a>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-normal text-left">Categoria:</p>
+                    </div>
+                    <div class="text-sm font-semibold text-left">
+                        <a class="border-b text-blue-950" href="">@(Category)
+                        </a>
+                    </div>
+                </div>
+            
+                <p class="pt-4">*Produto entregue em formato digital</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex items-center justify-between pt-2 border-t">
+        <p class="text-xl font-bold text-blue-950">R$ @Price.ToString("N2")</p>
+        <div class="flex gap-2">
+             <button class="flex items-center px-3 py-1 text-sm font-medium text-white rounded-md bg-secondary hover:bg-secondary/80">
+                <span class="mr-1 text-sm material-icons">add_shopping_cart</span> Adicionar ao carrinho
+            </button>
+            <button class="flex items-center px-3 py-1 text-sm font-medium text-white rounded-md bg-primary hover:bg-primary/80">
+               <span class="mr-1 text-sm material-icons">shopping_cart</span> Comprar agora
             </button>
         </div>
     </div>
@@ -24,9 +60,6 @@
 @code {
     [Parameter]
     public string BorderColor { get; set; } = "#151773";
-
-    [Parameter]
-    public string BackgroundColor { get; set; } = "#FFF";
 
     [Parameter]
     public string TextColor { get; set; } = "#000";
@@ -45,6 +78,12 @@
 
     [Parameter]
     public string Author { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Publisher { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Category { get; set; } = string.Empty;
 
     [Parameter]
     public decimal Price { get; set; } = 0.0m;

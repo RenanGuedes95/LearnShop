@@ -30,7 +30,7 @@
     }
     else 
     {
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             @foreach (var ebook in ebooks) 
             {
                 <ProductCard
@@ -39,8 +39,9 @@
                     ProductImage="@ebook.ImageUrl" 
                     Author="@ebook.Author" 
                     Price="@ebook.Price" 
+                    Publisher="@ebook.Publisher"
+                    Category="@ebook.Category"
                     Width="100%" 
-                    BackgroundColor="#FFF" 
                     TextColor="#000" 
                 />
             }
