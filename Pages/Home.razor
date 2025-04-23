@@ -35,16 +35,21 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-7 justify-items-center">
             @foreach (var ebook in ebooks) 
             {
-                <ProductCard
-                    ProductTitle="@ebook.Title" 
-                    ProductDescription="@ebook.Description" 
-                    ProductImage="@ebook.ImageUrl" 
-                    Author="@ebook.Author" 
-                    Price="@ebook.Price" 
-                    Publisher="@ebook.Publisher"
-                    Category="@ebook.Category"
-                    TextColor="#000" 
-                />
+                <a
+                    href="@($"/ebook/{ebook.Category.ToLower().Replace(" ","-")}/{ebook.Id}")"
+                    target="_blank"
+                    class="transition-shadow duration-300 ease-in-out">
+                    <ProductCard
+                        ProductTitle="@ebook.Title" 
+                        ProductDescription="@ebook.Description" 
+                        ProductImage="@ebook.ImageUrl" 
+                        Author="@ebook.Author" 
+                        Price="@ebook.Price" 
+                        Publisher="@ebook.Publisher"
+                        Category="@ebook.Category"
+                        TextColor="#000" 
+                    />
+                </a>
             }
         </div>
     }
