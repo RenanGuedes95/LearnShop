@@ -17,14 +17,16 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4 py-4">
+        <div class="flex justify-center border-dashed rounded-sm border-1 bg-gradient-to-br from-green-600 to-blue-700">
         <ProductImage 
             Image="@ProductImage" 
             Alt="@ProductTitle"
-            Height="350px"
+            Height="300px"
             Width="220px"
             ObjectContain="contain"
         />
-        
+        </div>
+  
         <div class="flex flex-col justify-between h-full">
             <EbookInfo
                 ProductDescription="@ProductDescription"
@@ -41,7 +43,7 @@
     <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t">
         <PriceTag 
             PriceValue="@Price" 
-            TextSize="3xl"
+            TextSize="2xl"
         />
 
         <div class="flex">
