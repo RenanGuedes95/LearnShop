@@ -1,0 +1,57 @@
+@page "/pedidos"
+@using LearnShop.Models
+@using LearnShop.Services
+@using LearnShop.Services.Interfaces
+@inject IOrderService OrderService
+
+<PageTitle>Pedidos</PageTitle>
+
+<div>
+    <div class="bg-[#151773] flex items-center justify-center w-full h-[5vh] border rounded-sm font-bold text-2xl">
+        <span class="text-white">MEUS PEDIDOS</span>
+    </div>
+    <div>
+        @if (orders == null)
+        {
+            <p>Carregando...</p>
+        }
+        else if (!orders.Any())
+        {
+            <p>Nenhum pedido encontrado.</p>
+        }
+        else
+        {
+            <div class="space-y-4">
+                @foreach (var order in orders)
+                {
+                    <div class="border rounded-lg p-4 shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold">Pedido: @order.Number - @order.Date.ToString("dd/MM/yyyy")</h3>
+                               @order.ProductName
+                            </div>
+                            <a href="@order.DownloadUrl"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
+                                Baixar PDF
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="mt-6">
+                <button class="text-blue-600 hover:underline">VER MAIS</button>
+            </div>
+        }
+    </div>
+
+
+</div>
+
+@code {
+    private List<Order>? orders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        orders = await OrderService.GetOrdersAsync();
+    }
+}
