@@ -6,7 +6,8 @@
     style="background-color:@BackgroundColor; color:@TextColor;"
     @onmouseover="@OnMouseOver"
     @onmouseout="@OnMouseOut"
-    @onclick="ButtonClicked">
+    @onclick="ButtonClicked"
+    @onclick:preventDefault="@PreventDefaultStatus">
     
     @if (!string.IsNullOrEmpty(Icon)) {
         <span class="mr-1 material-icons">@Icon</span>
@@ -32,6 +33,9 @@
 
     [Parameter] 
     public string Size { get; set; } = "md";
+
+    [Parameter]
+    public bool PreventDefaultStatus { get; set; } = true;
 
     [Parameter] 
     public EventCallback OnClick { get; set; }

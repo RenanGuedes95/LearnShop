@@ -20,6 +20,9 @@
         <ProductImage 
             Image="@ProductImage" 
             Alt="@ProductTitle"
+            Height="350px"
+            Width="220px"
+            ObjectContain="contain"
         />
         
         <div class="flex flex-col justify-between h-full">
@@ -38,20 +41,19 @@
     <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t">
         <PriceTag 
             PriceValue="@Price" 
-            TextColor="#FFF"
-            TextSize="2xl"
-            BackgroundColor="#151773"
+            TextSize="3xl"
         />
 
         <div class="flex">
             <Button 
                 Text="Adicionar ao carrinho" 
                 Icon="add_shopping_cart" 
-                OnClick="@(() => { AddToCart(); })"
                 TextColor="#FFF"
                 BackgroundColor="#151773"
                 HoverBackgroundColor="#23238a"
                 Size="md"
+                PreventDefaultStatus=true
+                OnClick="@(() => { AddToCart(); })"
             />
         </div>
     </div>
