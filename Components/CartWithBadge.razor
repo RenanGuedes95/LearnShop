@@ -1,20 +1,27 @@
 @inherits ComponentBase
+@inject NavigationManager NavigationManager
 
 <div>
     <button type="button" 
-            class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-[#0f1058] rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#0f1058] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            @onclick="GoToCart">
         <h1 class="text-white">
             <span class="material-icons">shopping_cart</span>
         </h1>
-    <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-green-600 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">@(ItemCount)
+    <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-green-600 border-2 border-white rounded-full -top-1.5 -end-2 dark:border-[#0f1058]">@(ItemCount)
     </div>
     </button>
 </div>
 
 @code{
     [Parameter]
-    public int ItemCount { get; set; } = 0;
+    public int ItemCount { get; set; } = 1;
 
     [Parameter]
     public EventCallback OnCartClick { get; set; }
+
+    private void GoToCart()
+    {
+        NavigationManager.NavigateTo("/carrinho");
+    }
 }
