@@ -1,37 +1,32 @@
 [
     {
-      "Numero": 101,
-      "Data": "2024-03-15T00:00:00",
-      "ProdutoNome": "Dominando C# Avançado",
-      "DownloadUrl": "#",
-      "DetalhesUrl": "#"
+      "Number": 101,
+      "Date": "2024-03-15T00:00:00",
+      "ProductName": "Dominando C# Avançado",
+      "DownloadUrl": "#"
     },
     {
-      "Numero": 102,
-      "Data": "2024-03-16T00:00:00",
-      "ProdutoNome": "ASP.NET Core Essencial",
-      "DownloadUrl": "#",
-      "DetalhesUrl": "#"
+      "Number": 102,
+      "Date": "2024-03-16T00:00:00",
+      "ProductName": "ASP.NET Core Essencial",
+      "DownloadUrl": "#"
     },
     {
-      "Numero": 103,
-      "Data": "2024-03-17T00:00:00",
-      "ProdutoNome": "Blazor na Prática",
-      "DownloadUrl": "#",
-      "DetalhesUrl": "#"
+      "Number": 103,
+      "Date": "2024-03-17T00:00:00",
+      "ProductName": "Blazor na Prática",
+      "DownloadUrl": "#"
     },
     {
-      "Numero": 104,
-      "Data": "2024-03-18T00:00:00",
-      "ProdutoNome": "Entity Framework Core Profissional",
-      "DownloadUrl": "#",
-      "DetalhesUrl": "#"
+      "Number": 104,
+      "Date": "2024-03-18T00:00:00",
+      "ProductName": "Entity Framework Core Profissional",
+      "DownloadUrl": "#"
     },
     {
-      "Numero": 105,
-      "Data": "2024-03-19T00:00:00",
-      "ProdutoNome": "Design Patterns em .NET",
-      "DownloadUrl": "#",
-      "DetalhesUrl": "#"
+      "Number": 105,
+      "Date": "2024-03-19T00:00:00",
+      "ProductName": "Design Patterns em .NET",
+      "DownloadUrl": "#"
     }
   ]

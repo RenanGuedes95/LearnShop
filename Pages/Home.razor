@@ -11,43 +11,48 @@
     TextSize="2xl"
  />
 
-<div class="container px-4 py-8 mx-auto">
-    <div class="flex items-center justify-center mb-center">
-        <h1 class="mb-6 text-3xl font-bold text-primary">E-books em destaque</h1>
+<div class="container px-3 py-4 mx-auto">
+    <div class="flex items-center justify-center m-6">
+        <h1 class="p-2 font-semibold text-white rounded-lg md:text-3xl sm:text-sm bg-gradient-to-br from-green-500 to-blue-600 border-b-3 border-b-primary border-t-3 border-t-highlight animate-bounce">
+            E-books em destaque
+        </h1>
     </div>
     
     @if (isLoading) 
     {
-        <div class="flex justify-center">
+        <div class="flex items-center justify-center">
             <div class="w-12 h-12 border-t-2 border-b-2 rounded-full animate-spin border-primary"></div>
         </div>
     }
     else if (ebooks == null || !ebooks.Any()) 
     {
         <div class="py-8 text-center">
-            <p>Nenhum encontrado</p>
+            <p>Nenhum e-book encontrado.</p>
         </div>
     }
     else 
     {
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-7 justify-items-center">
             @foreach (var ebook in ebooks) 
             {
-                <ProductCard
-                    ProductTitle="@ebook.Title" 
-                    ProductDescription="@ebook.Description" 
-                    ProductImage="@ebook.ImageUrl" 
-                    Author="@ebook.Author" 
-                    Price="@ebook.Price" 
-                    Publisher="@ebook.Publisher"
-                    Category="@ebook.Category"
-                    Width="100%" 
-                    TextColor="#000" 
-                />
+                <a
+                    href="@($"/ebook/{ebook.Category.ToLower().Replace(" ","-")}/{ebook.Id}")"
+                    target="_blank"
+                    class="transition-shadow duration-300 ease-in-out">
+                    <ProductCard
+                        ProductTitle="@ebook.Title" 
+                        ProductDescription="@ebook.Description" 
+                        ProductImage="@ebook.ImageUrl" 
+                        Author="@ebook.Author" 
+                        Price="@ebook.Price" 
+                        Publisher="@ebook.Publisher"
+                        Category="@ebook.Category"
+                        TextColor="#000" 
+                    />
+                </a>
             }
         </div>
     }
-
 </div>
 
 @code {

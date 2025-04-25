@@ -1,0 +1,44 @@
+@inherits ComponentBase
+
+<div class="px-3 py-2 mx-auto bg-white rounded-lg shadow-md w-screen h-[240px]">
+    <div class="grid grid-cols-[1fr_1fr] gap-3 py-3"> 
+        <div class="flex justify-center border-dashed rounded-sm max-w-[60%] max-h-[100%] h-[145px] border-1 bg-gradient-to-br from-green-600 to-blue-700">
+             <ProductImage
+                Image="@ProductImage" 
+                Alt="@ProductName"
+                Height="95px"
+                Width="90px"
+                ObjectContain="contain"
+            />
+        </div>
+
+        <div class="flex flex-col justify-between w-full h-full text-left">
+            <h2 class="text-2xl font-bold text-gray-800">
+                @ProductName
+            </h2>
+
+            <div class="flex flex-col items-end justify-between w-full text-right">
+                <p class="mr-2 text-sm font-normal text-gray-600">QUANTIDADE</p>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex flex-wrap items-center justify-between gap-2 pt-2">
+        <PriceTag
+             PriceValue="@ProductPrice" 
+            TextSize="xl"
+        />
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string ProductName { get; set; } = string.Empty;
+
+    [Parameter]
+    public string ProductImage { get; set; } = string.Empty;
+
+    [Parameter]
+    public decimal ProductPrice { get; set; } = 0m;
+}

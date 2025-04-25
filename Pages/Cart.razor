@@ -1,0 +1,33 @@
+@page "/carrinho"
+
+<PageTitle>Carrinho</PageTitle>
+
+<PageHeader
+    Title="Carrinho"
+    TextSize="2xl"
+/>
+
+<div class="container flex flex-col items-center justify-center gap-3 px-3 py-4 mx-auto">
+    <div class="flex flex-col items-center justify-center w-full p-2 m-1 text-xl font-bold text-black bg-white rounded-lg shadow-md">
+        <h1 class="">RESUMO DO CARRINHO</h1>
+        <div class="flex items-center justify-center text-md">
+            <p>Passo a passo do checkout (stepper)</p>
+        </div>
+    </div>
+
+    <div class="flex items-center justify-center w-full m-2">
+        <CartProductSummary
+            ProductName="E-book 1"
+            ProductImage="https://picsum.photos/360/360?random=60"
+            ProductPrice=29.99m
+        />
+    </div>
+
+    <div class="flex items-center justify-center w-full m-2">
+        <Subtotal/>
+    </div>
+</div>
+
+@code {
+    
+}
