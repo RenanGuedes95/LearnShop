@@ -28,7 +28,7 @@
                     HoverBackgroundColor="#23238a"
                     Width="500px"
                     PreventDefaultStatus=true
-                    OnClick="@HandleContinueToPayment"
+                    OnClick="@HandleContinue"
                 />
             </div>
         </div>
@@ -51,15 +51,7 @@
     [Parameter]
     public EventCallback OnContinue { get; set; }
 
-    private async Task HandleContinueToPayment()
-    {
-        if (OnContinue.HasDelegate)
-        {
-            await OnContinue.InvokeAsync();
-        }
-    }
-
-    private async Task HandleContinueToOrderPlaced()
+    private async Task HandleContinue()
     {
         if (OnContinue.HasDelegate)
         {
