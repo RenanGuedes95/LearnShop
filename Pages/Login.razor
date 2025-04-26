@@ -1,23 +1,18 @@
-@page "/cadastrar/usuario"
+@page "/login"
 
 <PageTitle>Cadastrar Usuário</PageTitle>
-<PageHeader Title="Cadastro" TextSize="2xl" />
+<PageHeader Title="Login" TextSize="2xl" />
 
 <div class="container flex flex-col items-center justify-center gap-3 px-3 py-4 mx-auto h-full">
     <div class="flex flex-col items-center justify-center bg-gradient-to-br from-blue-400 to-green-600 border rounded-2xl w-[90vw] h-[70vh] md:w-[35vw]">
-        <div class="flex flex-col justify-center rounded-2xl w-[80vw] h-[50vh] bg-white  md:w-[20vw]">
-            <Input Label="Nome" Type="text" Id="name" @bind-Value="userName" Placeholder="Digite seu nome" />
+        <div class="flex flex-col justify-center rounded-2xl w-[80vw] h-[50vh] bg-white gap-5 md:w-[20vw]">
+            <Input Label="Login" Type="text" Id="login" @bind-Value="userLogin" Placeholder="Digite seu login" />
 
-            <Input Label="CPF" Type="number-pad" Id="cpf" @bind-Value="userCpf" Placeholder="Digite seu CPF" />
-
-            <Input Label="E-mail" Type="email" Id="email" @bind-Value="userEmail" Placeholder="Digite seu E-mail" />
-
-            <Input Label="Senha" Type="password" Id="password" @bind-Value="userPassword"
-                Placeholder="Digite sua senha" />
+            <Input Label="Password" Type="password" Id="password" @bind-Value="userPassword" Placeholder="Digite sua senha" />
         </div>
             <div class="flex items-center justify-center bg-transparent mt-10">
-                        <Button Text="Cadastrar" 
-                                Icon="person_add" 
+                        <Button Text="Entrar" 
+                                Icon="login" 
                                 TextColor="#FFF" 
                                 BackgroundColor="#151773"
                                 HoverBackgroundColor="#23238a" 
@@ -30,8 +25,6 @@
 </div>
 
 @code {
-    private string? userName;
-    private string? userCpf;
-    private string? userEmail;
+    private string? userLogin;
     private string? userPassword;
 }
