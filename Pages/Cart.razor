@@ -1,5 +1,7 @@
 @page "/carrinho"
 
+@using LearnShop.Components
+
 <PageTitle>Carrinho</PageTitle>
 
 <PageHeader
@@ -8,22 +10,56 @@
 />
 
 <div class="container flex flex-col items-center justify-center gap-3 px-3 py-4 mx-auto">
-
-    <div class="flex items-center justify-center w-full m-2">
-        <CartOrderPlaced
-            ProductName="E-book 1"
+    @if (step == 1)
+    {
+    <div class="flex flex-row items-center justify-center w-full m-2">
+        <CartProductSummary
+            ProductName="O Programador Pragmático"
             ProductImage="https://picsum.photos/360/360?random=60"
             ProductPrice=29.99m
-            PaymentType="Pix"
-            OrderNumber="#1029384"
         />
     </div>
 
-    <div class="flex items-center justify-center w-full m-2">
-        <Subtotal/>
+    <div class="flex items-center justify-center w-full m-1">
+        <Subtotal 
+            OnContinueToPayment="GoToPayment"
+        />
     </div>
+    }
+    else if (step == 2)
+    {
+        <p>Página de Pagamento</p>
+    }
+    else if (step == 3)
+    {
+    <div class="flex flex-row items-center justify-center w-full m-2">
+        <CartOrderPlaced
+            ProductName="O Programador Pragmático"
+            ProductImage="https://picsum.photos/360/360?random=60"
+            ProductPrice=29.99m
+            OrderNumber="12345"
+            PaymentType="Cartão de Crédito"
+        />
+    </div>
+
+    <div class="flex items-center justify-center w-full m-1">
+        <Subtotal 
+            OnContinueToPayment="GoToPayment"
+        />
+    </div>
+    }
 </div>
 
 @code {
-    
+    private int step = 1;
+
+    private void GoToPayment()
+    {
+        step = 2;
+    }
+
+    private void GoToOrderPlaced()
+    {
+        step = 3;
+    }
 }
