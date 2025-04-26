@@ -935,6 +935,9 @@
   .rounded-\[0\.5rem\] {
     border-radius: 0.5rem;
   }
+  .rounded-\[1rem\] {
+    border-radius: 1rem;
+  }
   .rounded-\[5rem\] {
     border-radius: 5rem;
   }
@@ -1163,6 +1166,9 @@
   }
   .p-\[0\.7rem\] {
     padding: 0.7rem;
+  }
+  .p-\[0\.8rem\] {
+    padding: 0.8rem;
   }
   .p-\[1rem\] {
     padding: 1rem;
