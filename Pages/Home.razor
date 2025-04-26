@@ -2,6 +2,7 @@
 @using LearnShop.Models
 @using LearnShop.Services
 @using LearnShop.Services.Interfaces
+@using LearnShop.Components
 @inject IEbookService EbookService
 
 <PageTitle>Home</PageTitle>
@@ -20,9 +21,7 @@
     
     @if (isLoading) 
     {
-        <div class="flex items-center justify-center">
-            <div class="w-12 h-12 border-t-2 border-b-2 rounded-full animate-spin border-primary"></div>
-        </div>
+        <Loading/>
     }
     else if (ebooks == null || !ebooks.Any()) 
     {

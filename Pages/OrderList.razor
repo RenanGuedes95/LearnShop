@@ -9,11 +9,11 @@
 <PageHeader Title="MEUS PEDIDOS" TextSize="2xl" />
 
 <div class="container flex flex-col items-center justify-center gap-3 px-3 py-4 mx-auto">
-    @if (orders == null)
+    @if (isLoading)
     {
-        <p>Carregando...</p>
+        <Loading/>
     }
-    else if (!orders.Any())
+    else if (orders == null || !orders.Any())
     {
         <p>Nenhum pedido encontrado.</p>
     }
@@ -48,6 +48,7 @@
                                 BackgroundColor="#151773"
                                 HoverBackgroundColor="#23238a" 
                                 Size="md" 
+                                Width="min-w-[125px]"
                                 PreventDefaultStatus=true
                                 OnClick="@(()=>{})" />
     </div>
@@ -56,9 +57,11 @@
 
 @code {
     private List<Order>? orders;
-
+    private bool isLoading = true;
     protected override async Task OnInitializedAsync()
     {
+        isLoading = true;
         orders = await OrderService.GetOrdersAsync();
+        isLoading = false;
     }
 }
