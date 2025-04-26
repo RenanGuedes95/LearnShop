@@ -1,4 +1,5 @@
 @page "/carrinho"
+@inject NavigationManager NavigationManager
 
 @using LearnShop.Components
 
@@ -22,7 +23,8 @@
 
     <div class="flex items-center justify-center w-full m-1">
         <Subtotal 
-            OnContinueToPayment="GoToPayment"
+            ButtonText="CONTINUAR PARA O PAGAMENTO"
+            OnContinue="GoToPayment"
         />
     </div>
     }
@@ -44,7 +46,8 @@
 
     <div class="flex items-center justify-center w-full m-1">
         <Subtotal 
-            OnContinueToPayment="GoToPayment"
+            ButtonText="IR À HOME"
+            OnContinue="GoToHome"
         />
     </div>
     }
@@ -61,5 +64,10 @@
     private void GoToOrderPlaced()
     {
         step = 3;
+    }
+
+    private void GoToHome()
+    {
+        NavigationManager.NavigateTo("/");
     }
 }
