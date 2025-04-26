@@ -30,7 +30,24 @@
     }
     else if (step == 2)
     {
-        <p>Página de Pagamento</p>
+        <div class="flex flex-row items-center justify-center w-full m-2">
+            <CartOrderPayment/>
+        </div>
+
+        <div class ="flex flex-col items-center justify-center w-full m-2">
+            <ProductOnCart
+                ProductName="O Programador Pragmático"
+                ProductImage="https://picsum.photos/360/360?random=60"
+                ProductPrice=29.99m
+            />
+        </div>
+
+       <div class="flex items-center justify-center w-full m-1">
+        <Subtotal 
+            ButtonText="FECHAR PEDIDO"
+            OnContinue="GoToOrderPlaced"
+        />
+    </div>
     }
     else if (step == 3)
     {
