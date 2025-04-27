@@ -1,4 +1,5 @@
-﻿@inject NavigationManager NavigationManager
+﻿@using LearnShop.Components
+@inject NavigationManager NavigationManager
 
 <div class="z-10 flex flex-col w-full">
     <nav class="flex flex-row w-full justify-between items-center p-[1rem] bg-primary">
@@ -19,29 +20,25 @@
             </button>
             
             <div class="hidden md:flex flex-col text-white font-bold text-[0.9]">
-                <h1>Olá, <span class="cursor-pointer">Entre</span> ou</h1>
-                <h1 class="cursor-pointer">Cadastre-se</h1>
+                <a href="/login">
+                    <h1>Olá, <span class="cursor-pointer">Entre</span> ou</h1>
+                    <h1 class="cursor-pointer">Cadastre-se</h1>
+                </a>
             </div>
         </div>
     </nav>
-    <div class="p-[1rem] w-full bg-secondary">
-        <input
-            type="text"
-            placeholder="Pesquisar e-books..."
-            class="text-center w-full p-[0.5rem] rounded-lg border bg-white border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#76be11]"
-        />
-    </div>
+    <SearchBox />
     <div class="@(menuAberto ? "" : "hidden") absolute top-[8.8rem] left-0 w-full z-50">
     <div class=" bg-primary text-white h-[3rem] flex items-center justify-center w-full">
         <h1 class="">Categorias</h1>
     </div>
     <div class="flex flex-col w-full text-white ">
         <ul class="flex flex-col gap-3 justify-center items-center p-[1rem] bg-secondary text-[0.9rem]">
-            <li class="p-2 cursor-pointer">Desenvolvimento Web</li>
-            <li class="p-2 cursor-pointer">Desenvolvimento Móvel</li>
-            <li class="p-2 cursor-pointer">Engenharia de Software</li>
-            <li class="p-2 cursor-pointer">Algoritmos</li>
-            <li class="p-2 cursor-pointer">Banco de Dados</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/desenvolvimento-web"))">Desenvolvimento Web</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/desenvolvimento-movel"))">Desenvolvimento Móvel</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/engenharia-de-software"))">Engenharia de Software</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/algoritmos"))">Algoritmos</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/banco-de-dados"))">Banco de Dados</li>
         </ul>
     </div>
     <div class=" @(!isLogado ? "" : "hidden") bg-primary flex flex-col gap-[0.7rem] justify-center items-center p-[1rem] w-full text-white p-[1rem]">
@@ -75,11 +72,11 @@
     </div>
     <div class="flex-col hidden text-white md:flex bg-primary">
         <ul class="flex flex-row gap-3 justify-around items-center p-[0.7rem]  text-[1.2rem]">
-            <li class="p-2 cursor-pointer">Desenvolvimento Web</li>
-            <li class="p-2 cursor-pointer">Desenvolvimento Móvel</li>
-            <li class="p-2 cursor-pointer">Engenharia de Software</li>
-            <li class="p-2 cursor-pointer">Algoritmos</li>
-            <li class="p-2 cursor-pointer">Banco de Dados</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/desenvolvimento-web"))">Desenvolvimento Web</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/desenvolvimento-movel"))">Desenvolvimento Móvel</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/engenharia-de-software"))">Engenharia de Software</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/algoritmos"))">Algoritmos</li>
+            <li class="p-2 cursor-pointer" @onclick="@(() => NavigateTo("/categoria/banco-de-dados"))">Banco de Dados</li>
         </ul>    
     </div>
 </div>
@@ -100,6 +97,11 @@
     private void GoToHome()
     {
         NavigationManager.NavigateTo("/");
+    }
+
+    private void NavigateTo(string url)
+    {
+        NavigationManager.NavigateTo(url);
     }
     
     private bool isLogado = true;
