@@ -22,6 +22,8 @@
             <div class="hidden md:flex flex-col text-white font-bold text-[0.9]">
                 <a href="/login">
                     <h1>Olá, <span class="cursor-pointer">Entre</span> ou</h1>
+                </a>
+                <a href="/cadastrar/usuario">
                     <h1 class="cursor-pointer">Cadastre-se</h1>
                 </a>
             </div>
@@ -52,7 +54,7 @@
             <a href="/perfil"
                 <h1 class="text-[1.2rem] border-b"><span class="mr-1 material-icons">person</span>Olá, Samuel</h1>
             </a
-            <a class="text-[1.2rem] text-highlight border-b">Meus Livros</a>
+            <a @onclick="@(()=> NavigateTo("/pedidos"))" class="text-[1.2rem] text-highlight border-b">Meus Livros</a>
         </div>
 
         <div class="flex flex-col justify-between w-full gap-2 p-1">
@@ -64,7 +66,7 @@
                 HoverBackgroundColor="#379c10"
                 Size="md"
                 PreventDefaultStatus=true
-                OnClick="@(() => { GoToHome(); })"
+                OnClick="@(() => { NavigateTo("/"); })"
             />
         </div>
 
@@ -87,16 +89,6 @@
     private void TrocarEstadoMenu()
     {
         menuAberto = !menuAberto;
-    }
-
-    private void GoToProfile()
-    {
-        NavigationManager.NavigateTo("/perfil");
-    }
-
-    private void GoToHome()
-    {
-        NavigationManager.NavigateTo("/");
     }
 
     private void NavigateTo(string url)
