@@ -14,7 +14,7 @@
     @if (step == 1)
     {
     <div class="flex flex-row items-center justify-center w-full m-2">
-        <CartProductSummary
+        <CartOrderSummary
             ProductName="O Programador Pragmático"
             ProductImage="https://picsum.photos/360/360?random=60"
             ProductPrice=29.99m
@@ -24,6 +24,7 @@
     <div class="flex items-center justify-center w-full m-1">
         <Subtotal 
             ButtonText="CONTINUAR PARA O PAGAMENTO"
+            ButtonIcon="add_shopping_cart"
             OnContinue="GoToPayment"
         />
     </div>
@@ -45,6 +46,7 @@
        <div class="flex items-center justify-center w-full m-1">
         <Subtotal 
             ButtonText="FECHAR PEDIDO"
+            ButtonIcon="shopping_cart_checkout"
             OnContinue="GoToOrderPlaced"
         />
     </div>
@@ -64,6 +66,7 @@
     <div class="flex items-center justify-center w-full m-1">
         <Subtotal 
             ButtonText="IR À HOME"
+            ButtonIcon="home"
             OnContinue="GoToHome"
         />
     </div>

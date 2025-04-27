@@ -1,4 +1,5 @@
-﻿
+﻿@inject NavigationManager NavigationManager
+
 <div class="z-10 flex flex-col w-full">
     <nav class="flex flex-row w-full justify-between items-center p-[1rem] bg-primary">
         <div>
@@ -26,8 +27,8 @@
     <div class="p-[1rem] w-full bg-secondary">
         <input
             type="text"
-            placeholder="Pesquisar cursos..."
-            class="w-full p-[0.5rem] rounded-lg border bg-white border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#76be11]"
+            placeholder="Pesquisar e-books..."
+            class="text-center w-full p-[0.5rem] rounded-lg border bg-white border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#76be11]"
         />
     </div>
     <div class="@(menuAberto ? "" : "hidden") absolute top-[8.8rem] left-0 w-full z-50">
@@ -51,12 +52,25 @@
     </div>
     <div class="@(isLogado ? "" : "hidden") bg-primary flex flex-col gap-[0.7rem] justify-center items-center p-[1rem] w-full text-white p-[1rem]">
         <div class="flex flex-row justify-between w-full">
-            <h1 class="text-[1.2rem]">Olá, Samuel</h1>
-            <a class="text-[1.2rem] text-highlight border-b ">Meus Livros</a>
+            <a href="/perfil"
+                <h1 class="text-[1.2rem] border-b"><span class="mr-1 material-icons">person</span>Olá, Samuel</h1>
+            </a
+            <a class="text-[1.2rem] text-highlight border-b">Meus Livros</a>
         </div>
-        <button class="bg-highlight w-full rounded-[0.5rem] text-black">
-            SAIR
-        </button>
+
+        <div class="flex flex-col justify-between w-full gap-2 p-1">
+            <Button 
+                Text="SAIR" 
+                Icon="logout" 
+                TextColor="#FFF"
+                BackgroundColor="#76be11"
+                HoverBackgroundColor="#379c10"
+                Size="md"
+                PreventDefaultStatus=true
+                OnClick="@(() => { GoToHome(); })"
+            />
+        </div>
+
     </div>
     </div>
     <div class="flex-col hidden text-white md:flex bg-primary">
@@ -70,8 +84,6 @@
     </div>
 </div>
 
-
-
 @code {
     private bool menuAberto = false;
     
@@ -80,5 +92,15 @@
         menuAberto = !menuAberto;
     }
 
+    private void GoToProfile()
+    {
+        NavigationManager.NavigateTo("/perfil");
+    }
+
+    private void GoToHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+    
     private bool isLogado = true;
 }

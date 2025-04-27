@@ -22,7 +22,7 @@
                 <Button
                     Text="@ButtonText"
                     Size="md"
-                    Icon="shopping_cart_checkout"
+                    Icon="@ButtonIcon"
                     TextColor="#FFF"
                     BackgroundColor="#151773"
                     HoverBackgroundColor="#23238a"
@@ -38,6 +38,9 @@
 @code {
     [Parameter]
     public string ButtonText { get; set; } = "Continuar";
+
+    [Parameter]
+    public string ButtonIcon { get; set; } = "";
 
     [Parameter]
     public decimal SubtotalPrice { get; set; } = 29.99m;
