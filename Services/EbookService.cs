@@ -36,7 +36,9 @@ namespace LearnShop.Services
                     return new List<Ebook>();
                 }
 
-                var ebooks = ebooksFromCategory.Where(e => e.Category.Equals(category, StringComparison.OrdinalIgnoreCase)).ToList();
+                var cleanedCategory = category.Replace("-", " ", StringComparison.OrdinalIgnoreCase);
+
+                var ebooks = ebooksFromCategory.Where(e => e.Category.Equals(cleanedCategory, StringComparison.OrdinalIgnoreCase)).ToList();
 
                 return ebooks.Count > 0 ? ebooks : new List<Ebook>();
             }

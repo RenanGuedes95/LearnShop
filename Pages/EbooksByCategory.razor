@@ -13,7 +13,7 @@
 <div class="container px-3 py-4 mx-auto">
     <div class="flex items-center justify-center m-6">
         <h1 class="p-2 font-semibold text-white rounded-lg md:text-3xl sm:text-sm bg-gradient-to-br from-green-500 to-blue-600 border-b-3 border-b-primary border-t-3 border-t-highlight">
-            E-books sobre @categoryName
+            E-books sobre @categoryName.Replace("-", " ")
         </h1>
     </div>
 
@@ -58,12 +58,13 @@ else
 
     private List<Ebook>? filteredEbooks;
     private bool isLoading = true;
-
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
+        isLoading = true;
         if (string.IsNullOrWhiteSpace(categoryName))
         {
             filteredEbooks = new List<Ebook>();
+            isLoading = false;
             return;
         }
 
