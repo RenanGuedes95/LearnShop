@@ -4,7 +4,7 @@
 <PageTitle>Produto</PageTitle>
 
 <div class="bg-primary text-white h-[3rem] flex justify-center items-center md:hidden ">
-    HOME &gt; CATEGORIAS &gt; @(productCategory.ToUpper())
+    HOME > @(productCategory)
 </div>
 <div class="flex flex-col w-full p-[1rem]  h-screen justify-center items-center z-1 gap-[1rem]">
     <div class="w-full md:w-1/2 border flex justify-center bg-gradient-to-br from-green-600 to-blue-800">
@@ -24,10 +24,10 @@
         </div>
         <div class="flex items-center justify-between pt-2 border-t"></div>
         <div class="flex gap-2 items-center justify-center">
-             <button class="flex items-center px-3 py-1 text-sm font-medium text-white rounded-md bg-secondary hover:bg-secondary/80 cursor-pointer" oncOnClick="@(() => { AddToCart(); })">
+             <button class="flex items-center px-3 py-1 text-sm font-medium text-white rounded-md bg-secondary hover:bg-secondary/80 cursor-pointer"  @onclick="@(() => { AddToCart(); })">
                 <span class="mr-1 text-sm material-icons">add_shopping_cart</span> Adicionar ao carrinho
             </button>
-            <button class="flex items-center px-3 py-1 text-sm font-medium text-white rounded-md bg-primary hover:bg-primary/80 cursor-pointer" oncOnClick="@(() => { GoToCart(); })">
+            <button class="flex items-center px-3 py-1 text-sm font-medium text-white rounded-md bg-primary hover:bg-primary/80 cursor-pointer"  @onclick="@(() => { GoToCart(); })">
                <span class="mr-1 text-sm material-icons">shopping_cart</span> Comprar agora
             </button>
         </div>

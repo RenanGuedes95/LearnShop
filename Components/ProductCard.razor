@@ -96,17 +96,4 @@
         Console.WriteLine($"Adicionando {ProductTitle} ao carrinho.");
     }
 
-    private void NavigateToProductPage()
-    {
-        var url = $"/product?" +
-                  $"productTitle={Uri.EscapeDataString(ProductTitle)}&" +
-                  $"productDescription={Uri.EscapeDataString(ProductDescription)}&" +
-                  $"productImage={Uri.EscapeDataString(ProductImage)}&" +
-                  $"author={Uri.EscapeDataString(Author)}&" +
-                  $"publisher={Uri.EscapeDataString(Publisher)}&" +
-                  $"category={Uri.EscapeDataString(Category)}&" +
-                  $"productPrice={Price.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
-
-        NavigationManager.NavigateTo(url);
-    }
 }
