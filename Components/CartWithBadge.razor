@@ -2,11 +2,12 @@
 @inject NavigationManager NavigationManager
 
 <div>
-    <button type="button" 
-            class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-[#0f1058] rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#0f1058] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    <button type="button"
+            tabindex="-1" 
+            class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-center bg-[#0f1058] rounded-md hover:bg-blue-800 dark:bg-[#0f1058] dark:hover:bg-blue-700"
             @onclick="GoToCart">
         <h1 class="text-white">
-            <span class="material-icons">shopping_cart</span>
+            <span tabindex="-1" class="material-icons">shopping_cart</span>
         </h1>
     <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-green-600 border-2 border-white rounded-full -top-1.5 -end-2 dark:border-[#0f1058]">@(ItemCount)
     </div>
